@@ -31,6 +31,12 @@ What changed over the last 3 revisions
 
 =over
 
+=item 0.12	Tuesday 13th January, 2004
+
+	Make the require logic softer by stealing from base.pm.
+	https://rt.cpan.org/Ticket/Display.html?id=4897
+
+
 =item 0.11	Tuesday 26th August, 2003
 
 	test suite fixup

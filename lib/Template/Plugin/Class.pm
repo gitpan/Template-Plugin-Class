@@ -2,14 +2,26 @@ use strict;
 package Template::Plugin::Class;
 use base 'Template::Plugin';
 use vars qw( $VERSION );
-$VERSION = '0.11';
+$VERSION = '0.12';
 
 sub new {
     my $class = shift;
     my $context = shift;
     my $arg = shift;
 
-    eval "require $arg" or die "couldn't require '$arg' $@";
+    # stolen from base.pm
+    eval "require $arg";
+    # Only ignore "Can't locate" errors from our eval require.
+    # Other fatal errors (syntax etc) must be reported.
+    die if $@ && $@ !~ /^Can't locate .*? at \(eval /;
+    no strict 'refs';
+    unless (%{"$arg\::"}) {
+        require Carp;
+        Carp::croak("Package \"$arg\" is empty.\n",
+                    "\t(Perhaps you need to 'use' the module ",
+                    "which defines that package first.)");
+    }
+
     return bless \$arg, 'Template::Plugin::Class::Proxy';
 }
 
