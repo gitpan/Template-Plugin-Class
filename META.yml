@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name: Template-Plugin-Class
-version: 0.10
+version: 0.11
 license: perl
 distribution_type: module
 requires:
@@ -12,8 +12,8 @@ conflicts: {}
 provides:
   Template::Plugin::Class:
     file: lib/Template/Plugin/Class.pm
-    version: 0.10
+    version: 0.11
   Template::Plugin::Class::Proxy:
     file: lib/Template/Plugin/Class.pm
-    version: 0.10
+    version: 0.11
 generated_by: Module::Build version 0.19

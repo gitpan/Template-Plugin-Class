@@ -2,7 +2,7 @@ use strict;
 package Template::Plugin::Class;
 use base 'Template::Plugin';
 use vars qw( $VERSION );
-$VERSION = '0.10';
+$VERSION = '0.11';
 
 sub new {
     my $class = shift;
@@ -44,7 +44,7 @@ arbitrary classes.  One use for this is in Class::DBI style
 applications, where you may do somthing like this:
 
   [% USE cd = Class('Music::CD') %]
-  [% FOREACH disc = [ cd.retrieve_all ] %]
+  [% FOREACH disc = cd.retrieve_all %]
   [% disc.artist %] - [% disc.title %]
   [% END %]
 
