@@ -1,4 +1,4 @@
-README for Template::Plugin::Class 0.11
+README for Template::Plugin::Class 0.13
 
 =head1 NAME
 
@@ -31,6 +31,14 @@ What changed over the last 3 revisions
 
 =over
 
+=item 0.13	Wednesday 10th May, 2006
+
+	Make it work correctly when diagnostics.pm is in use.
+	http://rt.cpan.org/Ticket/Display.html?id=11538
+	Changed to ship a traditional Makefile.PL
+	Pulled the copy about rt.cpan.org from L</BUGS>
+
+
 =item 0.12	Tuesday 13th January, 2004
 
 	Make the require logic softer by stealing from base.pm.
@@ -41,10 +49,6 @@ What changed over the last 3 revisions
 
 	test suite fixup
 
-
-=item 0.10	Saturday 15th August, 2003
-
-	initial CPAN release
 =back
 
 =head1 AUTHOR
@@ -53,7 +57,7 @@ Richard Clamp <richardc@unixbeard.net>
 
 =head1 COPYRIGHT
 
-Copyright (C) 2003 Richard Clamp.  All Rights Reserved.
+Copyright (C) 2003, 2004, 2006 Richard Clamp.  All Rights Reserved.
 
 This module is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
