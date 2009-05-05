@@ -1,8 +1,6 @@
 Changes
-Build.PL
 Makefile.PL
-META.yml
-README
 MANIFEST
 lib/Template/Plugin/Class.pm
 t/class.t
+META.yml                                 Module meta-data (added by MakeMaker)
